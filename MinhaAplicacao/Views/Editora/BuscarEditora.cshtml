@@ -1,0 +1,41 @@
+﻿@model MinhaAplicacao.Models.Editora
+
+@{
+    ViewData["Title"] = "BuscarEditora";
+}
+
+<h1>BuscarEditora</h1>
+
+<div>
+    <h4>Editora</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Apresentacao)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Apresentacao)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Voltar ao Home</a>
+</div>

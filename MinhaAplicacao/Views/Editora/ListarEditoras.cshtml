@@ -1,0 +1,57 @@
+﻿@using System.Linq;
+
+@model IEnumerable<MinhaAplicacao.Models.Editora>
+
+@{
+    ViewData["Title"] = "ListarEditoras";
+}
+
+<h1>ListarEditoras</h1>
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Apresentacao
+                </th>
+                <th>
+                    CNPJ
+                </th>
+                <th>
+                    Pesquisar
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+             {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apresentacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CNPJ)
+                    </td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="Editora" asp-action="BuscarEditora" asp-route-id="@Model.FirstOrDefault(x =>x.Id == item.Id).Id" >&times;</a>                   
+                    </td>
+                </tr>
+                       
+
+             }
+        </tbody>
+    </table>
+</div>
