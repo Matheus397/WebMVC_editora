@@ -13,6 +13,5 @@ namespace MinhaAplicacao.Data.Repositories
         Task<Editora> EditoraById(int id);
 
         Task<Editora> CreateEditora(Editora editora);
-
     }
 }

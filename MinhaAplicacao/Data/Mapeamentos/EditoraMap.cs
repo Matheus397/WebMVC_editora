@@ -18,7 +18,6 @@ namespace MinhaAplicacao.Data.Mapeamentos
             builder.Property(t => t.Apresentacao)
                 .HasMaxLength(500)
                 .IsRequired(false);
-
         }
     }
 }

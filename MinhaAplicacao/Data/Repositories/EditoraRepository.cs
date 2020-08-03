@@ -14,7 +14,6 @@ namespace MinhaAplicacao.Data.Repositories
         {
             _context.Editoras.Add(editora);
             await _context.SaveChangesAsync();
-
             return editora;
         }
 

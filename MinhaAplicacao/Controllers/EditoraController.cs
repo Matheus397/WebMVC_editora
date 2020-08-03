@@ -11,11 +11,8 @@ namespace MinhaAplicacao.Controllers
     {
         private readonly IEditoraService _service;
 
-        public EditoraController(IEditoraService service)
-        {
-            _service = service;
-        }
-
+        public EditoraController(IEditoraService service) => _service = service;
+        
         [HttpGet]
         public async Task<ActionResult<Editora>> BuscarEditora(int id) => View(await _service.EditoraById(id));
         [HttpPost]
